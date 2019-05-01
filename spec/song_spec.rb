@@ -24,7 +24,7 @@ describe 'Song' do
       expect(song.artist).to eq(new_artist_object)
     end
   end
-
+  binding.pry
   describe '.new_by_filename' do
     it 'creates a new instance of a song from the file that\'s passed' do
       new_instance = Song.new_by_filename(file_name)
