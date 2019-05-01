@@ -1,5 +1,3 @@
-require 'pry'
-
 describe 'Song' do
   let(:song) {Song.new('Man in the Mirror')}
   let(:file_name) {'Michael Jackson - Black or White - pop.mp3'}
@@ -9,14 +7,12 @@ describe 'Song' do
       expect(song.name).to eq('Man in the Mirror')
     end
   end
-  binding.pry
   describe '#name=' do
     it 'sets the song name' do
       song.name = 'Thriller'
       expect(song.name).to eq('Thriller')
     end
   end
-  binding.pry
   describe '#artist=' do
     it 'sets the artist object to belong to the song' do
       new_artist_object = Artist.new('King of Pop')
@@ -24,7 +20,6 @@ describe 'Song' do
       expect(song.artist).to eq(new_artist_object)
     end
   end
-  binding.pry
   describe '.new_by_filename' do
     it 'creates a new instance of a song from the file that\'s passed' do
       new_instance = Song.new_by_filename(file_name)
